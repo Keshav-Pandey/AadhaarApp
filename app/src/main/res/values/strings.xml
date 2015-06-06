@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Aadhaar</string>
-
+    <string name="app_name">1 Click Forms</string>
+    <string name="appforaad">Apply for Aadhaar Now!</string>
+    <string name="whatisaad">What is Aadhar?</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>

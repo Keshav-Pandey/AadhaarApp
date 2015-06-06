@@ -1,6 +1,7 @@
 package com.aadhaar.kpandey1.aadhaar;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -40,12 +41,22 @@ public class QRcode extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-        public void onClick(View v) {
+        public void Scan(View v) {
             Intent intent = new Intent("com.google.zxing.client.android.SCAN");
             intent.putExtra("com.google.zxing.client.android.SCAN.SCAN_MODE", "QR_CODE_MODE");
             startActivityForResult(intent, 0);
         }
 
+    public void showWhat(View v)
+    {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://uidai.gov.in/what-is-aadhaar.html"));
+        startActivity(browserIntent);
+    }
+    public void showGet(View v)
+    {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://resident.uidai.net.in/"));
+        startActivity(browserIntent);
+    }
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
@@ -55,6 +66,7 @@ public class QRcode extends ActionBarActivity {
                 // Handle successful scan
             } else if (resultCode == RESULT_CANCELED) {
                 // Handle cancel
+                Toast.makeText(getBaseContext(),"Failed to retrieve data",Toast.LENGTH_LONG).show();
             }
         }
     }

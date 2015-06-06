@@ -1,18 +1,91 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".QRcode">
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".QRcode"
+    android:background="#ffffffff">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Scan"
+        android:text="Add your details"
         android:onClick="onClick"
         android:id="@+id/scan"
-        android:layout_marginTop="62dp"
+        android:textColor="#ffff1003"
+        android:textSize="@dimen/TextSize"
+        android:background="#ffffffff"
+        android:layout_below="@+id/form"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="1 Click Form"
+        android:onClick="onClick"
+        android:id="@+id/form"
+        android:layout_below="@+id/scanform"
+        android:layout_alignLeft="@+id/scanform"
+        android:layout_alignStart="@+id/scanform"
+        android:textSize="@dimen/TextSize"
+        android:textColor="#fff9bb21"
+        android:background="#ffd6303d" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan a new Form"
+        android:onClick="onClick"
+        android:id="@+id/scanform"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/scan"
+        android:layout_alignStart="@+id/scan"
+        android:textSize="@dimen/TextSize"
+        android:textColor="#ffff1003"
+        android:background="#fff9bb21" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:background="@drawable/aadhaarlogo"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/scan"
+        android:layout_alignStart="@+id/scan" />
+
+    <TextView
+        android:id="@+id/appForAad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="20px"
+        android:text="@string/appforaad"
+        android:onClick="showGet"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffd6303d"
+        android:enabled="true"
+        android:linksClickable="true"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/whatIsAad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="20px"
+        android:text="@string/whatisaad"
+        android:onClick="showWhat"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffd6303d"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/scan"
+        android:layout_alignEnd="@+id/scan"
+        android:enabled="true"
+        android:linksClickable="true"
+        android:nestedScrollingEnabled="false"
+        android:clickable="true" />
+
 
 </RelativeLayout>
