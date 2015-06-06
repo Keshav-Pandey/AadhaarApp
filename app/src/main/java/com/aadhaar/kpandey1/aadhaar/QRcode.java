@@ -51,7 +51,7 @@ public class QRcode extends ActionBarActivity {
             if (resultCode == RESULT_OK) {
                 String contents = intent.getStringExtra("SCAN_RESULT");
                 String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
-                Toast.makeText(getBaseContext(),"Resultcode:"+resultCode+";\nReequestcode"+requestCode,Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(),"Contents:"+contents,Toast.LENGTH_LONG).show();
                 // Handle successful scan
             } else if (resultCode == RESULT_CANCELED) {
                 // Handle cancel
