@@ -57,6 +57,12 @@ public class QRcode extends ActionBarActivity {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://resident.uidai.net.in/"));
         startActivity(browserIntent);
     }
+
+    public void showForms(View v)
+    {
+        Intent formIntent = new Intent(this,formlist.class);
+        startActivity(formIntent);
+    }
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
@@ -66,7 +72,7 @@ public class QRcode extends ActionBarActivity {
                 // Handle successful scan
             } else if (resultCode == RESULT_CANCELED) {
                 // Handle cancel
-                Toast.makeText(getBaseContext(),"Failed to retrieve data",Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(),"Failed to retrieve data,try again.",Toast.LENGTH_LONG).show();
             }
         }
     }

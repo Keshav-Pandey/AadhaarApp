@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ffffffff"
+    tools:context="com.aadhaar.kpandey1.aadhaar.formlist">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Please select a form"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fffe3213"
+        android:textSize="@dimen/TextSize"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Pan Application"
+        android:onClick="onClick"
+        android:id="@+id/panform"
+        android:textSize="@dimen/TextSize"
+        android:textColor="#ffff1003"
+        android:background="#fff9bb21"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="52dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Pan Application"
+        android:onClick="onClick"
+        android:id="@+id/button"
+        android:textSize="@dimen/TextSize"
+        android:textColor="#ffff1003"
+        android:background="#fff9bb21"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/panform"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Pan Application"
+        android:onClick="onClick"
+        android:id="@+id/button2"
+        android:textSize="@dimen/TextSize"
+        android:textColor="#ffff1003"
+        android:background="#fff9bb21"
+        android:layout_marginTop="54dp"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Pan Application"
+        android:onClick="onClick"
+        android:id="@+id/button3"
+        android:textSize="@dimen/TextSize"
+        android:textColor="#ffff1003"
+        android:background="#fff9bb21"
+        android:layout_marginTop="69dp"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
